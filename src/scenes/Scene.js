@@ -12,15 +12,15 @@ export default class Scene {
     }
 
     removeObject(object) {
-		for ( var i = 0, l = this.objects.length; i < l; i++ ) {
 
-			if ( object == this.objects[ i ] ) {
+        this.objects.forEach((o, index) => {
+            if ( object == o ) {
 
-				this.objects.splice( i, 1 );
+				this.objects.splice( index, 1 );
 				return;
 
 			}
-		}
+        })
     }
 
     add(object) {

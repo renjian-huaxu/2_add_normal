@@ -155,6 +155,7 @@ export default class Vector3 {
   isZero() {
 
     var almostZero = 0.0001;
+    
     return (Math.abs(this.x) < almostZero) && (Math.abs(this.y) < almostZero) && (Math.abs(this.z) < almostZero);
 
   }

@@ -247,6 +247,7 @@ export default class WebGLRenderer {
 								"void main(void) {",
 
 									"vcolor = color;",
+									"// gl_Position = projectionMatrix * viewMatrix * vec4( position, 1.0 );",
 									"gl_Position = projectionMatrix * viewMatrix * vec4( position + normal, 1.0 );",
 
 								"}"].join("\n") ) );
