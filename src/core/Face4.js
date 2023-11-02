@@ -4,6 +4,7 @@ import Vector3 from "./Vector3";
 export default class Face4 {
 
     constructor(a, b, c, d, normal, color) {
+
         this.a = a;
         this.b = b;
         this.c = c;
@@ -11,7 +12,6 @@ export default class Face4 {
 
         this.normal = normal || new Vector3();
         this.screen = new Vector3();
-    
         this.color = color || new Color( 0xff000000 );
     }
 

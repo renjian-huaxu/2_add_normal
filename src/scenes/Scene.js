@@ -8,7 +8,9 @@ export default class Scene {
     }
 
     addObject(object) {
+
         this.objects.push(object);
+
     }
 
     removeObject(object) {
@@ -24,7 +26,9 @@ export default class Scene {
     }
 
     add(object) {
+
         this.addObject( object );
+        
     }
 
     toString() {

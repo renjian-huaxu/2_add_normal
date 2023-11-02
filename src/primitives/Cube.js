@@ -7,6 +7,7 @@ import Vertex from "../core/Vertex";
 export default class Cube extends Geometry {
 
     constructor(width, height, depth) {
+
         super()
 
         var scope = this,
@@ -33,6 +34,7 @@ export default class Cube extends Geometry {
         function v(x, y, z) {
     
             scope.vertices.push( new Vertex( new Vector3( x, y, z ) ) );
+            
         }
     
         function f4(a, b, c, d) {

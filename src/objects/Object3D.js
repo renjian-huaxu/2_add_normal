@@ -5,6 +5,7 @@ import Matrix4 from '../core/Matrix4'
 export default class Object3D {
 
     constructor(material) {
+        
         this.position = new Vector3()
         this.rotation = new Vector3()
         this.scale = new Vector3(1, 1, 1)
@@ -20,7 +21,6 @@ export default class Object3D {
 
     updateMatrix() {
         this.matrix.identity();
-
         this.matrix.multiplySelf(Matrix4.translationMatrix(this.position.x, this.position.y, this.position.z));
         this.matrix.multiplySelf(Matrix4.rotationXMatrix(this.rotation.x));
         this.matrix.multiplySelf(Matrix4.rotationYMatrix(this.rotation.y));

@@ -8,6 +8,7 @@ export default class Color {
     }
 
     setHex(hex) {
+
 		this.hex = hex;
 		this.updateRGBA();
 		this.updateStyleString();   
@@ -25,19 +26,30 @@ export default class Color {
     }
 
     updateHex() {
-        this.hex = Math.floor( this.a * 255 ) << 24 | Math.floor( this.r * 255 ) << 16 | Math.floor( this.g * 255 ) << 8 | Math.floor( this.b * 255 );
+
+        this.hex = Math.floor( this.a * 255 ) << 24 
+                | Math.floor( this.r * 255 ) << 16 
+                | Math.floor( this.g * 255 ) << 8 
+                | Math.floor( this.b * 255 );
     }
 
+
     updateRGBA() {
+
         this.a = ( this.hex >> 24 & 0xff ) / 0xff;
         // this.a = 1
 		this.r = ( this.hex >> 16 & 0xff ) / 0xff;
 		this.g = ( this.hex >> 8 & 0xff ) / 0xff;
 		this.b = ( this.hex & 0xff ) / 0xff;
+
     }
 
     updateStyleString() {
-        this.__styleString = 'rgba(' + Math.floor( this.r * 255 ) + ',' + Math.floor( this.g * 255 ) + ',' + Math.floor( this.b * 255 ) + ',' + this.a + ')';
+        
+        this.__styleString = 'rgba(' + Math.floor( this.r * 255 ) + ',' 
+            + Math.floor( this.g * 255 ) + ',' 
+            + Math.floor( this.b * 255 ) + ',' 
+            + this.a + ')';
     }
 
     toString() {

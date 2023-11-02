@@ -12,6 +12,7 @@ var _canvas = document.createElement( 'canvas' ),
 	normalMatrix
 
 export default class WebGLRenderer {
+
     domElement = _canvas
 	autoClear = true
 
@@ -21,13 +22,17 @@ export default class WebGLRenderer {
     }
 
     setSize(width, height) {
+
         _canvas.width = width;
 		_canvas.height = height;
 		_gl.viewport( 0, 0, _canvas.width, _canvas.height );
+
     }
 
     clear() {
+
         _gl.clear( _gl.COLOR_BUFFER_BIT | _gl.DEPTH_BUFFER_BIT );
+		
     }
 
     render() {
@@ -206,8 +211,8 @@ export default class WebGLRenderer {
 
 		}
 
-		_gl.clearColor( 0, 0, 0, 1 );
-		_gl.clearDepth( 1 );
+		// _gl.clearColor( 0, 0, 0, 1 );
+		// _gl.clearDepth( 1 );
 
 		_gl.enable( _gl.DEPTH_TEST );
 		_gl.depthFunc( _gl.LEQUAL );
